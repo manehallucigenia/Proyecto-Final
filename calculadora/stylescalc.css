@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #edf1ed;
+}
+.oscuro{
+    background: #282c2f;
+}
+.calculadora{
+    position: relative;
+    width: 340px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fffb;
+}
+.oscuro .calculadora{
+    background: #33393e;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px rgba(255, 255, 255, 0.1);
+}
+.calculadora .botones{
+    position: relative;
+    display: grid;
+}
+.calculadora .botones #valor{
+    position: relative;
+    grid-column: span 4;
+    user-select: none;
+    overflow: none;
+    width: 100%;
+    text-align: end;
+    color: #5266d6;
+    height: 100px;
+    line-height: 100px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 20px #fff;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    padding: 0 20px;
+    font-size: 2em;
+    font-weight: 500;
+}
+.oscuro .calculadora .botones #valor{
+    color: #eee;
+    box-shadow: inset 15px 15px 20px rgba(0, 0, 0, 0.5), inset -15px -15px 20px rgba(255, 255, 255, 0.1);
+}
+.calculadora .botones span{
+    position: relative;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),  -5px -5px 20px #fff;
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #666;
+    border: 2px solid #edf1f4;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 15px -15px 10px #fffb;
+    border-radius: 10px;
+}
+.oscuro .calculadora .botones span{
+    color: #eee;
+    border: 2px solid #333;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),  -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+.calculadora .botones span:active{
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+    color: #f44336;
+}
+.oscuro .calculadora .botones span:active{
+   box-shadow:  inset 5px 5px 10px rgba(0, 0, 0, 0.25), inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+.calculadora .botones span#limpiar{
+    grid-column: span 2;
+    background: #f44336;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+.calculadora .botones span#mas{
+    grid-row: span 2;
+    background: #31a935;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+.calculadora .botones span#igual{
+    grid-row: span 2;
+    background: #2196f3;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+.oscuro .calculadora .botones span#limpiar,
+.oscuro .calculadora .botones span#mas,
+.oscuro .calculadora .botones span:active{
+    border: 2px #333;
+}
+.calculadora .botones span#limpiar:active,
+.calculadora .botones span#mas:active,
+.calculadora .botones span#igual:active{
+    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff, inset -5px -5px 10px rgba(0, 0, 0, 0.1);
+}
+.oscuro .calculadora .botones span#limpiar:active,
+.oscuro .calculadora .botones span#mas:active,
+.oscuro .calculadora .botones span#igual:active{
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+    list-style: none;
+    align-items: center;
+    display: flex;
+    color: darkgreen;
+    }
+    li{
+         display: flex;
+         align-items: center;
+         
+    }
+    :root{
+         --blanco:#ffffff;
+         --oscuro:#212121;
+         --primario:#ffc107;
+         --secundario:#b60732;
+         --gris:#757575;
+         --grisClaro:#dfe9f3;
+     }
+     /*Globales*/
+     html{
+         font-size: 62.5%;
+         box-sizing: border-box;
+         scroll-snap-type: mandatory;
+     }
+     .servicio,
+     .navegacion-principal,
+     .formulario{
+         scroll-snap-align: center;
+         scroll-snap-stop: always;
+     }
+     *, *:before, *:after{
+         box-sizing: inherit;
+     }
+     body{
+         font-size: 16px; /*1rem=10px*/
+         font-family: sans-serif;
+         background-image: linear-gradient(to top, var(--grisClaro)0%, var(--blanco))100%;
+     }
+     .contenedor{
+     max-width: 120rem;
+     margin: 0 auto;    
+     }
+     .boton{
+         background-color: var(--secundario);
+         color: var(--blanco);
+         padding: 1rem 3rem;
+         margin-top: 3rem;
+         font-size: 2rem;
+         text-decoration: none;
+         text-transform: uppercase;
+         font-weight: bold;
+         border-radius: 0.5rem;
+         width: 90%;
+         text-align: center;
+         border: none    ;
+     }
+     .boton:hover{
+         cursor: pointer;
+     }
+     .sombra{
+         box-shadow: 0px 5px 15px rgba(112, 112, 112,0.48);
+         background-color: var(--blanco);
+         padding: 2rem;
+         border-radius: 0.5rem;
+     }
+     /*Tipografia*/
+     h1{
+         font-size: 3.8rem;
+     }
+     h2{
+         font-size: 2.8rem;
+     }
+     h3{
+         font-size: 1.8rem;
+     }
+     h1, h2, h3{
+         text-align: center;
+     }
+     /*titulo*/
+     .titulo span{
+            font-size: 2rem;
+     }
+     /*Navegacion*/
+     .nav-bg{
+         background-color: var(--secundario);
+     }
+     .navegacion-principal{
+         display: flex;
+         flex-direction: column;
+     }
+     .navegacion-principal a{
+         display: block;
+         text-align: center;
+         color: var(--blanco);
+         text-decoration: none;
+         font-size: 2rem;
+         font-weight: 700;
+         padding: 1rem;
+     }
+     nav ul{
+         list-style: none;
+     }
+     .navegacion-principal a:hover{
+         background-color: var(--primario);
+         color: var(--oscuro);
+     }
+     .hero{
+         background-image: url(../Img/hero.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         height: 450px;
+         position: relative;
+         margin-bottom: 2rem;
+     }
+     .contenido-hero{
+         position: absolute;
+         background-color: rgba(0,0,0,0.5);
+         background-color: rgb(0 0 0 / 50%);
+         width: 100%;
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+     }
+     .contenido-hero h2,
+     .contenido-hero
+     {
+         color: var(--blanco);
+     }
+     .contenido-hero .ubicacion{
+         display: flex;
+         align-items: flex-end;
+     }
+     

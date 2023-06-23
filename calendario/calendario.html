@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dycalendar.css">
+    <link rel="stylesheet" href="stylescale.css">
+    <title>Calendario</title>
+</head>
+<body>
+    <header  class="nav-bg">
+        <nav class="navegacion-principal del Contenedor">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../calculadora/calculadora.html">Calculadora</a></li>
+                <li><a href="../cronometro/cronometro.html">Cronometro</a></li>
+                <li><a href="../reloj analogico/reloj_analogico.html">Reloj Analogico</a></li>
+                <li><a href="../rompecabezas/rompecabezas.html">Rompecabezas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="box">
+        <div class="container">
+            <div id="dycalendar"></div>
+        </div>
+    </section>
+    <script src="dycalendar.js"></script>
+    <script>
+        dycalendar.draw({
+            target: '#dycalendar',
+            type: 'month',
+            dayformat: 'full',
+            monthformat: 'full',
+            highlighttargetdate:'true',
+            prevnextbutton: 'show',
+        })
+    </script>
+</body>
+</html>
